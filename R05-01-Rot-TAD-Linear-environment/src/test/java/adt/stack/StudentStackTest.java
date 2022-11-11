@@ -13,6 +13,7 @@ public class StudentStackTest {
 	public Stack<Integer> stack1;
 	public Stack<Integer> stack2;
 	public Stack<Integer> stack3;
+	private StackImpl<Integer> stack4;
 
 	@Before
 	public void setUp() throws StackOverflowException {
@@ -28,13 +29,15 @@ public class StudentStackTest {
 		stack2.push(1);
 		stack2.push(2);
 
+
 	}
 
 	private void getImplementations() {
 		// TODO O aluno deve ajustar aqui para instanciar sua implementação
-		stack1 = null;
-		stack2 = null;
-		stack3 = null;
+		stack1 = new StackImpl<>(3);
+		stack2 = new StackImpl<>(2);
+		stack3 = new StackImpl<>(4);
+		stack4 = new StackImpl<>(1);
 	}
 
 	// MÉTODOS DE TESTE
@@ -50,7 +53,7 @@ public class StudentStackTest {
 
 	@Test
 	public void testIsFull() {
-		assertFalse(stack1.isFull()); // vai depender do tamanho que a pilha foi
+		assertFalse(stack3.isFull()); // vai depender do tamanho que a pilha foi
 										// iniciada!!!!
 	}
 
@@ -82,7 +85,7 @@ public class StudentStackTest {
 
 	@Test(expected = StackUnderflowException.class)
 	public void testPopComErro() throws StackUnderflowException {
-		assertEquals(new Integer(3), stack1.pop()); // levanta excecao apenas se
+		assertEquals(new Integer(3), stack3.pop()); // levanta excecao apenas se
 													// stack1 for vazia
 	}
 }

@@ -13,8 +13,7 @@ public class StackImpl<T> implements Stack<T> {
 
 	@Override
 	public T top() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		return array[top];
 	}
 
 	@Override
@@ -27,7 +26,7 @@ public class StackImpl<T> implements Stack<T> {
 
 	@Override
 	public boolean isFull() {
-		if(array[top] == array[array.length - 1]){
+		if(top == 0){
 			return true;
 		}
 		return false;
@@ -35,14 +34,39 @@ public class StackImpl<T> implements Stack<T> {
 
 	@Override
 	public void push(T element) throws StackOverflowException {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		if(isFull()){
+			throw new StackOverflowException();
+		}
+		for(int index = array.length - 1; index >= 0; index--){
+			if(array[index] == null){
+				array[index] = element;
+				this.top = index;
+				break;
+			}else if(index == 0){
+				moveRight(array);
+				push(element);
+			}
+		}
 	}
+
+	public void moveRight(T[] array){
+		for(int index = array.length - 1; index >= 0;index--){
+			if(array[index] != null){
+				array[index] = array[index - 1];
+				this.top = index;
+			}
+		}
+	}
+
+
 
 	@Override
 	public T pop() throws StackUnderflowException {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		if(isEmpty()){
+			throw new StackUnderflowException();
+		}
+		T retonro = array[this.top--];
+		return retonro;
 	}
 
 }

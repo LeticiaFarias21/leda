@@ -7,6 +7,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import sorting.AbstractSorting;
+import sorting.linearSorting.CountingSort;
+import sorting.linearSorting.ExtendedCountingSort;
 
 public class StudentSortingTest {
 
@@ -17,6 +19,7 @@ public class StudentSortingTest {
 	private Integer[] vetorValoresIguais;
 
 	public AbstractSorting<Integer> implementation;
+	private AbstractSorting<Integer> implementationExtended;
 
 	@Before
 	public void setUp() {
@@ -38,8 +41,9 @@ public class StudentSortingTest {
 	private void getImplementation() {
 		// TODO O aluno deve instanciar sua implementação abaixo ao invés de
 		// null
-		this.implementation = null;
-		Assert.fail("Implementation not provided");
+		this.implementation = new CountingSort();
+		this.implementationExtended = new ExtendedCountingSort();
+
 	}
 
 	public void populaVetorTamanhoPar(Integer[] arrayPadrao) {
@@ -69,6 +73,9 @@ public class StudentSortingTest {
 		if(array.length > 0){
 			copy1 = Arrays.copyOf(array, array.length);			
 		}
+		implementationExtended.sort(array);
+		Arrays.sort(copy1);
+		Assert.assertArrayEquals(copy1, array);
 		implementation.sort(array);
 		Arrays.sort(copy1);
 		Assert.assertArrayEquals(copy1, array);

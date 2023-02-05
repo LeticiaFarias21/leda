@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-11-07T23:33:14.735-0300</date>
+  <logger>LETICIA FARIAS COSTA VIEIRA</logger>
+  <level>FINE</level>
+  <message>File 121110394-LETICIA FARIAS COSTA VIEIRA.zip was received. It was sent by LETICIA FARIAS COSTA VIEIRA from IP 192.168.0.11 at 07-11-2022 23*33*14</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-11-08T00:59:45.508-0300</date>
+  <logger>LETICIA FARIAS COSTA VIEIRA</logger>
+  <level>FINE</level>
+  <message>File 121110394-LETICIA FARIAS COSTA VIEIRA.zip was received. It was sent by LETICIA FARIAS COSTA VIEIRA from IP 192.168.0.11 at 08-11-2022 00*59*45</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-11-08T01:33:42.523-0300</date>
+  <logger>LETICIA FARIAS COSTA VIEIRA</logger>
+  <level>FINE</level>
+  <message>File 121110394-LETICIA FARIAS COSTA VIEIRA.zip was received. It was sent by LETICIA FARIAS COSTA VIEIRA from IP 192.168.0.11 at 08-11-2022 01*33*42</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-11-08T01:39:04.216-0300</date>
+  <logger>LETICIA FARIAS COSTA VIEIRA</logger>
+  <level>FINE</level>
+  <message>File 121110394-LETICIA FARIAS COSTA VIEIRA.zip was received. It was sent by LETICIA FARIAS COSTA VIEIRA from IP 192.168.0.11 at 08-11-2022 01*39*04</message>
+</record>
